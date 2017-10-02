@@ -1,0 +1,31 @@
+{
+  "src_folders": "src",
+  "output_folder": "./bin",
+  "selenium": {
+    "start_process": true,
+    "server_path": "./bin/selenium-server-standalone-3.4.0.jar",
+    "port": 4444,
+    "log_path" : "./reports",
+    "cli_args": {
+      "webdriver.chrome.driver": "./bin/chromedriver.exe"
+    }
+  },
+  "test_settings": {
+    "default": {
+      "launch_url": "http://localhost",
+      "filter" : "**/*.js",
+      "selenium_host"  : "localhost",
+      "silent": true,
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "chromeOptions": {
+          "args": [
+            "start-maximized"
+          ]
+        }
+      }
+    }
+  }
+}
